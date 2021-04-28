@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="112dp"
+        android:ems="10"
+        android:fontFamily="@font/esamanru_medium"
+        android:inputType="textPersonName"
+        android:text="품종을 입력하세요"
+        android:textColor="#E19861"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="232dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="74dp"
+        android:fontFamily="@font/esamanru_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="카메라"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="갤러리"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:fontFamily="@font/esamanru_medium"
+        android:inputType="textPersonName"
+        android:text="이름을 입력하세요"
+        android:textColor="#E19861"
+        android:textColorHighlight="#FFCCBC"
+        android:textColorHint="#FFCCBC"
+        android:textColorLink="#FFCCBC"
+        android:textCursorDrawable="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera"
+        app:layout_constraintVertical_bias="0.719" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/esamanru_medium"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.775">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/esamanru_medium"
+            android:text="수컷"
+            android:textColor="#E19861" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/esamanru_medium"
+            android:text="암컷"
+            android:textColor="#E19861" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="112dp"
+        android:ems="10"
+        android:fontFamily="@font/esamanru_medium"
+        android:inputType="textPersonName"
+        android:text="생년월일을 입력하세요"
+        android:textColor="#E19861"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/esamanru_medium"
+        android:text="등록하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
