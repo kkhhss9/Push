@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a548d1dc-28d1-4c46-9142-e2456c0a8e32" name="Default Changelist" comment="d">
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/androidTest/java/com/example/login_animal/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Diary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/LoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/RegisterActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Snack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/UserAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable-v24/paw_register.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/font/esamanru_medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/font/font.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/calendar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/diary.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/food.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/health_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/health_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/health_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/record.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/register_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/register_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/snack.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/walking_mate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/walking_mate_board.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/layout/walking_mate_map.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/release/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Login_Animal/Bob/src/test/java/com/example/login_animal/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloKotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloKotlin/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/techtown/abcdefg/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/techtown/abcdefg/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/techtown/abcdefg/Register_Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/techtown/abcdefg/Register_Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1sfBb6mRCdmtzOmo1Nl02xqmGAc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.techtown.abcdefg" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HOME\AndroidStudioProjects\abcdefg\app\src\main\res\layout" />
+      <recent name="C:\Users\HOME\AndroidStudioProjects\abcdefg\app\src\main\res\drawable" />
+      <recent name="C:\Users\HOME\AndroidStudioProjects\abcdefg\app\src\main\res\font" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="abcdefg.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\HOME\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a548d1dc-28d1-4c46-9142-e2456c0a8e32" name="Default Changelist" comment="" />
+      <created>1621253831421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621253831421</updated>
+    </task>
+    <task id="LOCAL-00001" summary="d">
+      <created>1621254717443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621254717443</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="263" y="138" key="AndroidCreateResourceFileDialog" timestamp="1621847180141">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="263" y="138" key="AndroidCreateResourceFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1621847180141" />
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1621779377168">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1621779377168" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1621254878035">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1621254878035" />
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1621779486622">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1621779486622" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1621779486621">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1621779486621" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1621779486621">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1621779486621" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1621779486621">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1621779486621" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1621779406390">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1621779406390" />
+    <state x="488" y="296" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621779350109">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="296" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1621779350109" />
+    <state x="472" y="170" key="git4idea.merge.GitMergeDialog" timestamp="1621779388141">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="472" y="170" key="git4idea.merge.GitMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1621779388141" />
+    <state x="480" y="262" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1621254552677">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="480" y="262" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.768@0.0.1366.768" timestamp="1621254552677" />
+    <state x="513" y="174" key="svn.repositoryBrowser" timestamp="1621254884849">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="513" y="174" key="svn.repositoryBrowser/0.0.1366.768@0.0.1366.768" timestamp="1621254884849" />
+    <state x="517" y="145" key="svn4idea.import.options" timestamp="1621254879523">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="517" y="145" key="svn4idea.import.options/0.0.1366.768@0.0.1366.768" timestamp="1621254879523" />
+  </component>
+</project>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630013339544",
+    "project_id": "fir-d02af",
+    "storage_bucket": "fir-d02af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630013339544:android:2817c54ebc99b17a912ded",
+        "android_client_info": {
+          "package_name": "org.techtown.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630013339544-ggmfq6b5a172leem135b5kgngiu1mgfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0VvQhg1nIUJYtNPtINhfqlCpB6AJank0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630013339544-ggmfq6b5a172leem135b5kgngiu1mgfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

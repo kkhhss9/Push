@@ -1,0 +1,3775 @@
+Index: ../Login_Animal/Bob/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/google-services.json	(date 1621088023726)
++++ ../Login_Animal/Bob/google-services.json	(date 1621088023726)
+@@ -0,0 +1,39 @@
++{
++  "project_info": {
++    "project_number": "172718561619",
++    "project_id": "login-animal-8fce1",
++    "storage_bucket": "login-animal-8fce1.appspot.com"
++  },
++  "client": [
++    {
++      "client_info": {
++        "mobilesdk_app_id": "1:172718561619:android:2cdbfdc7dd0d4fb3db29a6",
++        "android_client_info": {
++          "package_name": "com.example.login_animal"
++        }
++      },
++      "oauth_client": [
++        {
++          "client_id": "172718561619-d7ubne2kpquodu3j3d0i361cfihsf1eq.apps.googleusercontent.com",
++          "client_type": 3
++        }
++      ],
++      "api_key": [
++        {
++          "current_key": "AIzaSyB5OaLrLxyqrkdvSPlY6dM3GFuu8jR9sqM"
++        }
++      ],
++      "services": {
++        "appinvite_service": {
++          "other_platform_oauth_client": [
++            {
++              "client_id": "172718561619-d7ubne2kpquodu3j3d0i361cfihsf1eq.apps.googleusercontent.com",
++              "client_type": 3
++            }
++          ]
++        }
++      }
++    }
++  ],
++  "configuration_version": "1"
++}
+\ No newline at end of file
+Index: ../HelloKotlin/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"12\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n        <option name=\"useQualifiedModuleNames\" value=\"true\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../HelloKotlin/.idea/gradle.xml	(revision dc185d2f3311133c37925ad146c5fbc3af41dd74)
++++ ../HelloKotlin/.idea/gradle.xml	(date 1619608765139)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: ../Login_Animal/Bob/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/build.gradle	(date 1621163507200)
++++ ../Login_Animal/Bob/build.gradle	(date 1621163507200)
+@@ -0,0 +1,47 @@
++plugins {
++    id 'com.android.application'
++    id 'com.google.gms.google-services'
++}
++
++android {
++    compileSdkVersion 30
++    buildToolsVersion "30.0.3"
++
++    defaultConfig {
++        applicationId "com.example.login_animal"
++        minSdkVersion 28
++        targetSdkVersion 30
++        versionCode 1
++        versionName "1.0"
++
++        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
++    }
++
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
++        }
++    }
++    compileOptions {
++        sourceCompatibility JavaVersion.VERSION_1_8
++        targetCompatibility JavaVersion.VERSION_1_8
++    }
++}
++
++dependencies {
++
++    implementation 'androidx.appcompat:appcompat:1.2.0'
++    implementation 'com.google.android.material:material:1.3.0'
++    implementation 'com.google.android.gms:play-services-maps:17.0.1'
++    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
++    implementation 'com.google.android.gms:play-services-location:18.0.0'
++    implementation 'com.google.android.material:material:1.4.0-alpha02'
++    implementation 'noman.placesapi:placesAPI:1.1.3'
++    implementation 'com.google.firebase:firebase-auth:20.0.4'
++    implementation 'com.google.firebase:firebase-database:19.7.0'
++    testImplementation 'junit:junit:4.13.2'
++    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
++    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
++
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/proguard-rules.pro	(date 1621088023729)
++++ ../Login_Animal/Bob/proguard-rules.pro	(date 1621088023729)
+@@ -0,0 +1,21 @@
++# Add project specific ProGuard rules here.
++# You can control the set of applied configuration files using the
++# proguardFiles setting in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
++
++# Uncomment this to preserve the line number information for
++# debugging stack traces.
++#-keepattributes SourceFile,LineNumberTable
++
++# If you keep the line number information, uncomment this to
++# hide the original source file name.
++#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/drawable-v24/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1621088023879)
++++ ../Login_Animal/Bob/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1621088023879)
+@@ -0,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/values-night/themes.xml	(date 1621088024142)
++++ ../Login_Animal/Bob/src/main/res/values-night/themes.xml	(date 1621088024142)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.Login_Animal" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_200</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/black</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_200</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1621088024063)
++++ ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1621088024063)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1621088024066)
++++ ../Login_Animal/Bob/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1621088024066)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Record.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Record.java	(date 1621088023813)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Record.java	(date 1621088023813)
+@@ -0,0 +1,30 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++
++public class Record extends AppCompatActivity {
++
++    Button mbutton;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.record);
++
++        mbutton = findViewById(R.id.savebutton);
++
++        mbutton.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent myIntent = new Intent(Record.this, Calendar.class);
++                startActivity(myIntent);
++                finish();
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Calendar.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Calendar.java	(date 1621088023783)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Calendar.java	(date 1621088023783)
+@@ -0,0 +1,55 @@
++package com.example.login_animal;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.DatePicker;
++import android.widget.EditText;
++import android.widget.TextView;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++
++public class Calendar extends AppCompatActivity {
++
++    DatePicker datePicker;
++    EditText edtDiary;
++    Button btnSave,btndiary;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++        setTitle("건강 다이어리");
++
++
++        datePicker = (DatePicker) findViewById(R.id.datePicker);
++        edtDiary = (EditText) findViewById(R.id.edtDiary);
++        btnSave = (Button) findViewById(R.id.btnSave);
++        btndiary = (Button) findViewById(R.id.btndiary);
++
++
++        datePicker.init(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth(), (view, year, month, day) -> {
++        });
++
++
++        btnSave.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v1) {
++                Intent myIntent = new Intent(Calendar.this, Record.class);
++                startActivity(myIntent);
++                finish();
++            }
++        });
++
++        btndiary.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v2) {
++                Intent myIntent = new Intent(Calendar.this, Diary.class);
++                startActivity(myIntent);
++                finish();
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Main.java	(date 1621088023795)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Main.java	(date 1621088023795)
+@@ -0,0 +1,51 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageButton;
++
++
++public class Main extends AppCompatActivity implements View.OnClickListener {
++    ImageButton btnFood, btnSnack, btnWalk, btnHealth;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.main);
++
++        btnFood = findViewById(R.id.imgBtn1);
++        btnFood.setOnClickListener(this);
++        btnSnack = findViewById(R.id.imgBtn2);
++        btnSnack.setOnClickListener(this);
++        btnWalk = findViewById(R.id.imgBtn3);
++        btnWalk.setOnClickListener(this);
++        btnHealth = findViewById(R.id.imgBtn4);
++        btnHealth.setOnClickListener(this);
++    }
++
++    @Override
++    public void onClick(View v) {
++        switch (v.getId()) {
++            case R.id.imgBtn1:
++                Intent intent1 = new Intent(Main.this, Register_Food.class);
++                startActivity(intent1);
++                break;
++            case R.id.imgBtn2:
++                Intent intent2 = new Intent(Main.this, Register_Snack.class);
++                startActivity(intent2);
++                break;
++            case R.id.imgBtn3:
++                Intent intent3 = new Intent(Main.this, Register_Run.class);
++                startActivity(intent3);
++                break;
++            case R.id.imgBtn4:
++                Intent intent4 = new Intent(Main.this, Register_Health.class);
++                startActivity(intent4);
++                break;
++            default: break;
++        }
++
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Diary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Diary.java	(date 1621088023787)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Diary.java	(date 1621088023787)
+@@ -0,0 +1,89 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.content.pm.ResolveInfo;
++import android.graphics.Bitmap;
++import android.graphics.BitmapFactory;
++import android.os.Bundle;
++import android.provider.MediaStore;
++import android.view.View;
++import android.widget.Button;
++import android.widget.ImageView;
++
++import java.io.InputStream;
++import java.util.List;
++
++
++public class Diary  extends AppCompatActivity {
++    Button btnCamera, btnImage;
++    ImageView imgView;
++
++    final  int CAMERA_REQUEST_CODE = 1;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.diary);
++
++        btnCamera = (Button)findViewById(R.id.btnCamera);
++        btnImage = (Button)findViewById(R.id.btnimage);
++        imgView = (ImageView)findViewById(R.id.imageView);
++
++        btnCamera.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                if(IsCameraAvailable()){
++                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++
++                    startActivityForResult(intent, CAMERA_REQUEST_CODE);
++                }
++            }
++        });
++
++        btnImage.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent();
++                intent.setType("image/*");
++                intent.setAction(Intent.ACTION_GET_CONTENT);
++                startActivityForResult(intent, 1);
++            }
++        });
++
++    }
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
++        super.onActivityResult(requestCode, resultCode, data);
++        if (requestCode == CAMERA_REQUEST_CODE) {
++            Bundle bundle = data.getExtras();
++            Bitmap bitmap = (Bitmap) bundle.get("data");
++            imgView.setImageBitmap(bitmap);
++        }
++        if (requestCode == 1) {
++            // Make sure the request was successful
++            if (resultCode == RESULT_OK) {
++                try {
++                    // 선택한 이미지에서 비트맵 생성
++                    InputStream in = getContentResolver().openInputStream(data.getData());
++                    Bitmap img = BitmapFactory.decodeStream(in);
++                    in.close();
++                    // 이미지 표시
++                    imgView.setImageBitmap(img);
++                } catch (Exception e) {
++                    e.printStackTrace();
++                }
++            }
++        }
++    }
++
++    public boolean IsCameraAvailable(){
++        PackageManager packageManager = getPackageManager();
++        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++        List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
++        return list.size() > 0;
++    }
++
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/MainActivity.java	(date 1621088023810)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/MainActivity.java	(date 1621088023810)
+@@ -0,0 +1,14 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class MainActivity extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Run.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Run.java	(date 1621088023832)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Run.java	(date 1621088023832)
+@@ -0,0 +1,30 @@
++package com.example.login_animal;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageButton;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class Register_Run extends AppCompatActivity {
++
++    ImageButton register;
++    Intent intent;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.run);
++
++        register = findViewById(R.id.imageButton);
++
++        register.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                intent = new Intent(getApplicationContext(), Main.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/UserAccount.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/UserAccount.java	(date 1621088023840)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/UserAccount.java	(date 1621088023840)
+@@ -0,0 +1,34 @@
++package com.example.login_animal;
++
++public class UserAccount
++{
++    private String idToken; // Firebase Uid( 고유토큰정보)
++    private String emailId;
++    private String password;
++
++    public UserAccount() {    }
++
++    public String getIdToken() {
++        return idToken;
++    }
++
++    public void setIdToken(String idToken) {
++        this.idToken = idToken;
++    }
++
++    public String getEmailId() {
++        return emailId;
++    }
++
++    public void setEmailId(String emailId) {
++        this.emailId = emailId;
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate.java	(date 1621088023851)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate.java	(date 1621088023851)
+@@ -0,0 +1,38 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++
++public class WalkingMate extends AppCompatActivity implements View.OnClickListener {
++    Button btnWrite, btnMap;
++    Intent intent;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.walking_mate);
++
++        btnWrite = findViewById(R.id.btnWrite);
++        btnWrite.setOnClickListener(this);
++        btnMap = findViewById(R.id.btnMap);
++        btnMap.setOnClickListener(this);
++    }
++
++    @Override
++    public void onClick(View v) {
++        switch (v.getId()) {
++            case R.id.btnWrite:
++                intent = new Intent(this, WalkingMate_Board.class);
++                break;
++            case R.id.btnMap:
++                intent = new Intent(this, WalkingMate_Board.class);
++                break;
++            default: break;
++        }
++        startActivity(intent);
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Snack.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Snack.java	(date 1621088023835)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Snack.java	(date 1621088023835)
+@@ -0,0 +1,30 @@
++package com.example.login_animal;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageButton;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class Register_Snack extends AppCompatActivity {
++
++    ImageButton register;
++    Intent intent;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.snack);
++
++        register = findViewById(R.id.imageButton);
++
++        register.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                intent = new Intent(getApplicationContext(), Main.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health.java	(date 1621088023824)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health.java	(date 1621088023824)
+@@ -0,0 +1,30 @@
++package com.example.login_animal;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageButton;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class Register_Health extends AppCompatActivity {
++
++    ImageButton register;
++    Intent intent;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.health_1);
++
++        register = findViewById(R.id.imgBtn5);
++
++        register.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                intent = new Intent(getApplicationContext(), Register_Health_1.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/LoginActivity.java	(date 1621088023791)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/LoginActivity.java	(date 1621088023791)
+@@ -0,0 +1,71 @@
++package com.example.login_animal;
++
++import androidx.annotation.NonNull;
++        import androidx.appcompat.app.AppCompatActivity;
++
++        import android.content.Intent;
++        import android.os.Bundle;
++        import android.view.View;
++        import android.widget.Button;
++        import android.widget.EditText;
++        import android.widget.Toast;
++
++        import com.google.android.gms.tasks.OnCompleteListener;
++        import com.google.android.gms.tasks.Task;
++        import com.google.firebase.auth.AuthResult;
++        import com.google.firebase.auth.FirebaseAuth;
++        import com.google.firebase.database.DatabaseReference;
++        import com.google.firebase.database.FirebaseDatabase;
++
++public class LoginActivity extends AppCompatActivity
++{
++    private FirebaseAuth mFirebaseAuth; //파이어 베이스 인증
++    private DatabaseReference mDatabaseRef; //실시간 데이터 베이스
++    private EditText mEtEmail,mEtpwd;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_login);
++
++        mFirebaseAuth = FirebaseAuth.getInstance();
++        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Family login");
++
++        mEtEmail = findViewById(R.id.et_email);
++        mEtpwd = findViewById(R.id.et_pwd);
++
++        Button btn_login = findViewById(R.id.btn_login);
++        btn_login.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                //로그인요청
++                String strEmail = mEtEmail.getText().toString();
++                String strPwd = mEtpwd.getText().toString();
++
++                mFirebaseAuth.signInWithEmailAndPassword(strEmail,strPwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
++                    @Override
++                    public void onComplete(@NonNull Task<AuthResult> task) {
++                        if(task.isSuccessful()){
++                            //로그인 성공
++                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
++                            startActivity(intent);
++                            finish(); //현 엑티비티 파괴
++                        }else{
++                            Toast.makeText(LoginActivity.this,"로그인 실패 ㅋ",Toast.LENGTH_SHORT).show();
++                        }
++                    }
++                });
++            }
++        });
++
++        Button btn_register = findViewById(R.id.btn_register);
++        btn_register.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                //회원가입화면으로 이동
++                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Food.java	(date 1621247878805)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Food.java	(date 1621247878805)
+@@ -0,0 +1,116 @@
++package com.example.login_animal;
++
++import android.content.Context;
++import android.content.Intent;
++import android.os.Bundle;
++import android.os.Handler;
++import android.app.AlertDialog;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.widget.AdapterView;
++import android.widget.ArrayAdapter;
++import android.widget.Button;
++import android.widget.ImageButton;
++import android.widget.Spinner;
++import android.widget.TextView;
++import android.app.ProgressDialog;
++import android.content.DialogInterface;
++import android.widget.Toast;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class Register_Food extends AppCompatActivity {
++
++    ImageButton register;
++    Button button;
++    Intent intent;
++    View v;
++    ArrayAdapter<CharSequence> adspin0, adspin1, adspin2, adspin3;
++    String choice_do="";
++    String choice_se="";
++    TextView txtmsg;
++    Button btnRec;
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.food);
++        txtmsg = findViewById(R.id.textView);
++        register = findViewById(R.id.imageButton);;
++        btnRec = findViewById(R.id.btnRec);
++        final Spinner spin0 = (Spinner)findViewById(R.id.spnPer);
++        final Spinner spin1 = (Spinner)findViewById(R.id.spinner);
++        final Spinner spin2 = (Spinner)findViewById(R.id.spinner2);
++        adspin0 = ArrayAdapter.createFromResource(this, R.array.spinner_per, android.R.layout.simple_spinner_dropdown_item);
++        adspin1 = ArrayAdapter.createFromResource(this, R.array.spinner_do, android.R.layout.simple_spinner_dropdown_item);//처번째 어댑터에 값을 넣습니다. this=는 현재class를 의미합니다. R.array.spinner_do는 이곳에 도시를 다 쓸 경우 코딩이 길어지기 때문에 value->string.xml에 따로 String값들을 선언해두었습니다. //R.layout.simple_~~~는 안드로이드에서 기본제공하는 spinner 모양입니다. 다른것도 있는데 비슷합니다. adspin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);//이부분이 정확히 말로 설명을 못하겠습니다. 아무튼 필요합니다. 헤헤 고수분들 도와주세요.
++        adspin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
++        adspin2 = ArrayAdapter.createFromResource(Register_Food.this, R.array.spinner_do_g, android.R.layout.simple_spinner_dropdown_item);
++        adspin3 = ArrayAdapter.createFromResource(Register_Food.this,R.array.spinner_do_s, android.R.layout.simple_spinner_dropdown_item);
++        spin1.setAdapter(adspin1);
++
++
++        ArrayAdapter PerAdapter = ArrayAdapter.createFromResource(this,
++                R.array.spinner_per, android.R.layout.simple_spinner_item);
++        PerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
++        spin0.setAdapter(PerAdapter);
++
++        spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
++            @Override
++            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
++                if (adspin1.getItem(i).equals("건식 사료")) {
++                    choice_do = "건식 사료";
++                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
++                    spin2.setAdapter(adspin2);
++                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
++                        @Override
++                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
++                            choice_se = adspin2.getItem(i).toString();
++                        }
++
++                        @Override
++                        public void onNothingSelected(AdapterView<?> adapterView) {
++                        }
++                    });
++                } else if (adspin1.getItem(i).equals("습식 사료")) {
++                    choice_do = "습식 사료";
++                    adspin3 = ArrayAdapter.createFromResource(Register_Food.this, R.array.spinner_do_s, android.R.layout.simple_spinner_dropdown_item);
++                    adspin3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
++                    spin2.setAdapter(adspin3);
++                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
++                        @Override
++                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
++                            choice_se = adspin3.getItem(i).toString();
++                        }
++
++                        @Override
++                        public void onNothingSelected(AdapterView<?> adapterView) {
++                        }
++                    });
++                }
++            }
++
++            @Override
++            public void onNothingSelected(AdapterView<?> adapterView) {
++
++            }
++        });
++        btnRec.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                AlertDialog.Builder builder = new AlertDialog.Builder(Register_Food.this);
++                builder.setTitle("권장 사료량");
++                builder.setMessage("생후~3개월 : 몸무게의 7% \n 3개월~6개월 : 몸무게의 5~7% \n 6개월~12개월 : 몸무게의 4~5% \n 12개월 이상 : 몸무게의 2~3%");
++                builder.setNeutralButton("닫기",null);
++                builder.create().show();
++
++            }
++        });
++        register.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                txtmsg.setText("오늘의 간식정보 등록 완료!");
++            }
++        });
++
++      
++    }
++}
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health_1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health_1.java	(date 1621088023828)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/Register_Health_1.java	(date 1621088023828)
+@@ -0,0 +1,31 @@
++package com.example.login_animal;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageButton;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++public class Register_Health_1 extends AppCompatActivity {
++
++    ImageButton add;
++    Intent intent;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.health_2);
++
++        add = findViewById(R.id.imgBtn6);
++
++        add.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                intent = new Intent(getApplicationContext(), Main.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
++
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Board.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Board.java	(date 1621088023855)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Board.java	(date 1621088023855)
+@@ -0,0 +1,14 @@
++package com.example.login_animal;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class WalkingMate_Board extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.walking_mate_board);
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Map.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Map.java	(date 1621088023859)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/WalkingMate_Map.java	(date 1621088023859)
+@@ -0,0 +1,612 @@
++package com.example.login_animal;
++
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AlertDialog;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.app.ActivityCompat;
++import androidx.core.content.ContextCompat;
++
++import android.Manifest;
++import android.content.DialogInterface;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.location.Address;
++import android.location.Geocoder;
++import android.location.Location;
++import android.location.LocationManager;
++import android.os.Bundle;
++import android.os.Looper;
++import android.util.Log;
++import android.view.View;
++import android.view.WindowManager;
++import android.widget.Button;
++import android.widget.Toast;
++
++import com.google.android.gms.location.FusedLocationProviderClient;
++import com.google.android.gms.location.LocationCallback;
++import com.google.android.gms.location.LocationRequest;
++import com.google.android.gms.location.LocationResult;
++import com.google.android.gms.location.LocationServices;
++import com.google.android.gms.location.LocationSettingsRequest;
++import com.google.android.gms.maps.CameraUpdate;
++import com.google.android.gms.maps.CameraUpdateFactory;
++import com.google.android.gms.maps.GoogleMap;
++import com.google.android.gms.maps.OnMapReadyCallback;
++import com.google.android.gms.maps.SupportMapFragment;
++import com.google.android.gms.maps.model.BitmapDescriptorFactory;
++import com.google.android.gms.maps.model.LatLng;
++import com.google.android.gms.maps.model.Marker;
++import com.google.android.gms.maps.model.MarkerOptions;
++import com.google.android.material.snackbar.Snackbar;
++
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.HashSet;
++import java.util.List;
++import java.util.Locale;
++
++import noman.googleplaces.NRPlaces;
++import noman.googleplaces.Place;
++import noman.googleplaces.PlaceType;
++import noman.googleplaces.PlacesException;
++import noman.googleplaces.PlacesListener;
++
++
++public class WalkingMate_Map extends AppCompatActivity
++        implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback, PlacesListener{
++
++
++    private GoogleMap mMap;
++    private Marker currentMarker = null;
++
++    private static final String TAG = "googlemap_example";
++    private static final int GPS_ENABLE_REQUEST_CODE = 2001;
++    private static final int UPDATE_INTERVAL_MS = 1000;  // 1초
++    private static final int FASTEST_UPDATE_INTERVAL_MS = 500; // 0.5초
++
++
++    // onRequestPermissionsResult에서 수신된 결과에서 ActivityCompat.requestPermissions를 사용한 퍼미션 요청을 구별하기 위해 사용됩니다.
++    private static final int PERMISSIONS_REQUEST_CODE = 100;
++    boolean needRequest = false;
++
++
++    // 앱을 실행하기 위해 필요한 퍼미션을 정의합니다.
++    String[] REQUIRED_PERMISSIONS  = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};  // 외부 저장소
++
++
++    Location mCurrentLocatiion;
++    LatLng currentPosition;
++
++
++    private FusedLocationProviderClient mFusedLocationClient;
++    private LocationRequest locationRequest;
++    private Location location;
++
++
++    private View mLayout;  // Snackbar 사용하기 위해서는 View가 필요합니다.
++    // (참고로 Toast에서는 Context가 필요했습니다.)
++
++    List<Marker> previous_marker = null;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++
++        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
++                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
++
++        setContentView(R.layout.walking_mate_map);
++
++        previous_marker = new ArrayList<Marker>();
++
++        Button button = (Button)findViewById(R.id.button);
++        button.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                showPlaceInformation(currentPosition);
++            }
++        });
++
++        mLayout = findViewById(R.id.layout_main);
++
++        locationRequest = new LocationRequest()
++                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
++                .setInterval(UPDATE_INTERVAL_MS)
++                .setFastestInterval(FASTEST_UPDATE_INTERVAL_MS);
++
++
++        LocationSettingsRequest.Builder builder =
++                new LocationSettingsRequest.Builder();
++
++        builder.addLocationRequest(locationRequest);
++
++
++        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
++
++
++        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
++                .findFragmentById(R.id.map);
++        mapFragment.getMapAsync(this);
++    }
++
++    @Override
++    public void onMapReady(final GoogleMap googleMap) {
++        Log.d(TAG, "onMapReady :");
++
++        mMap = googleMap;
++
++        //런타임 퍼미션 요청 대화상자나 GPS 활성 요청 대화상자 보이기전에
++        //지도의 초기위치를 서울로 이동
++        setDefaultLocation();
++
++
++
++        //런타임 퍼미션 처리
++        // 1. 위치 퍼미션을 가지고 있는지 체크합니다.
++        int hasFineLocationPermission = ContextCompat.checkSelfPermission(this,
++                Manifest.permission.ACCESS_FINE_LOCATION);
++        int hasCoarseLocationPermission = ContextCompat.checkSelfPermission(this,
++                Manifest.permission.ACCESS_COARSE_LOCATION);
++
++
++
++        if (hasFineLocationPermission == PackageManager.PERMISSION_GRANTED &&
++                hasCoarseLocationPermission == PackageManager.PERMISSION_GRANTED   ) {
++
++            // 2. 이미 퍼미션을 가지고 있다면
++            // ( 안드로이드 6.0 이하 버전은 런타임 퍼미션이 필요없기 때문에 이미 허용된 걸로 인식합니다.)
++
++
++            startLocationUpdates(); // 3. 위치 업데이트 시작
++
++
++        }else {  //2. 퍼미션 요청을 허용한 적이 없다면 퍼미션 요청이 필요합니다. 2가지 경우(3-1, 4-1)가 있습니다.
++
++            // 3-1. 사용자가 퍼미션 거부를 한 적이 있는 경우에는
++            if (ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[0])) {
++
++                // 3-2. 요청을 진행하기 전에 사용자가에게 퍼미션이 필요한 이유를 설명해줄 필요가 있습니다.
++                Snackbar.make(mLayout, "이 앱을 실행하려면 위치 접근 권한이 필요합니다.",
++                        Snackbar.LENGTH_INDEFINITE).setAction("확인", new View.OnClickListener() {
++
++                    @Override
++                    public void onClick(View view) {
++
++                        // 3-3. 사용자게에 퍼미션 요청을 합니다. 요청 결과는 onRequestPermissionResult에서 수신됩니다.
++                        ActivityCompat.requestPermissions( WalkingMate_Map.this, REQUIRED_PERMISSIONS,
++                                PERMISSIONS_REQUEST_CODE);
++                    }
++                }).show();
++
++
++            } else {
++                // 4-1. 사용자가 퍼미션 거부를 한 적이 없는 경우에는 퍼미션 요청을 바로 합니다.
++                // 요청 결과는 onRequestPermissionResult에서 수신됩니다.
++                ActivityCompat.requestPermissions( this, REQUIRED_PERMISSIONS,
++                        PERMISSIONS_REQUEST_CODE);
++            }
++
++        }
++
++
++
++        mMap.getUiSettings().setMyLocationButtonEnabled(true);
++        // 현재 오동작을 해서 주석처리
++
++        //mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
++        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
++
++            @Override
++            public void onMapClick(LatLng latLng) {
++
++                Log.d( TAG, "onMapClick :");
++            }
++        });
++    }
++
++    LocationCallback locationCallback = new LocationCallback() {
++        @Override
++        public void onLocationResult(LocationResult locationResult) {
++            super.onLocationResult(locationResult);
++
++            List<Location> locationList = locationResult.getLocations();
++
++            if (locationList.size() > 0) {
++                location = locationList.get(locationList.size() - 1);
++                //location = locationList.get(0);
++
++                currentPosition
++                        = new LatLng(location.getLatitude(), location.getLongitude());
++
++
++                String markerTitle = getCurrentAddress(currentPosition);
++                String markerSnippet = "위도:" + String.valueOf(location.getLatitude())
++                        + " 경도:" + String.valueOf(location.getLongitude());
++
++                Log.d(TAG, "onLocationResult : " + markerSnippet);
++
++
++                //현재 위치에 마커 생성하고 이동
++                setCurrentLocation(location, markerTitle, markerSnippet);
++
++                mCurrentLocatiion = location;
++            }
++
++
++        }
++
++    };
++
++
++
++    private void startLocationUpdates() {
++
++        if (!checkLocationServicesStatus()) {
++
++            Log.d(TAG, "startLocationUpdates : call showDialogForLocationServiceSetting");
++            showDialogForLocationServiceSetting();
++        }else {
++
++            int hasFineLocationPermission = ContextCompat.checkSelfPermission(this,
++                    Manifest.permission.ACCESS_FINE_LOCATION);
++            int hasCoarseLocationPermission = ContextCompat.checkSelfPermission(this,
++                    Manifest.permission.ACCESS_COARSE_LOCATION);
++
++
++
++            if (hasFineLocationPermission != PackageManager.PERMISSION_GRANTED ||
++                    hasCoarseLocationPermission != PackageManager.PERMISSION_GRANTED   ) {
++
++                Log.d(TAG, "startLocationUpdates : 퍼미션 안가지고 있음");
++                return;
++            }
++
++
++            Log.d(TAG, "startLocationUpdates : call mFusedLocationClient.requestLocationUpdates");
++
++            mFusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
++
++            if (checkPermission())
++                mMap.setMyLocationEnabled(true);
++
++        }
++
++    }
++
++
++    @Override
++    protected void onStart() {
++        super.onStart();
++
++        Log.d(TAG, "onStart");
++
++        if (checkPermission()) {
++
++            Log.d(TAG, "onStart : call mFusedLocationClient.requestLocationUpdates");
++            mFusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null);
++
++            if (mMap!=null)
++                mMap.setMyLocationEnabled(true);
++
++        }
++
++
++    }
++
++
++    @Override
++    protected void onStop() {
++
++        super.onStop();
++
++        if (mFusedLocationClient != null) {
++
++            Log.d(TAG, "onStop : call stopLocationUpdates");
++            mFusedLocationClient.removeLocationUpdates(locationCallback);
++        }
++    }
++
++
++
++
++    public String getCurrentAddress(LatLng latlng) {
++
++        //지오코더... GPS를 주소로 변환
++        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
++
++        List<Address> addresses;
++
++        try {
++
++            addresses = geocoder.getFromLocation(
++                    latlng.latitude,
++                    latlng.longitude,
++                    1);
++        } catch (IOException ioException) {
++            //네트워크 문제
++            Toast.makeText(this, "지오코더 서비스 사용불가", Toast.LENGTH_LONG).show();
++            return "지오코더 서비스 사용불가";
++        } catch (IllegalArgumentException illegalArgumentException) {
++            Toast.makeText(this, "잘못된 GPS 좌표", Toast.LENGTH_LONG).show();
++            return "잘못된 GPS 좌표";
++
++        }
++
++
++        if (addresses == null || addresses.size() == 0) {
++            Toast.makeText(this, "주소 미발견", Toast.LENGTH_LONG).show();
++            return "주소 미발견";
++
++        } else {
++            Address address = addresses.get(0);
++            return address.getAddressLine(0).toString();
++        }
++
++    }
++
++
++    public boolean checkLocationServicesStatus() {
++        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
++
++        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
++                || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
++    }
++
++
++    public void setCurrentLocation(Location location, String markerTitle, String markerSnippet) {
++
++
++        if (currentMarker != null) currentMarker.remove();
++
++
++        LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
++
++        MarkerOptions markerOptions = new MarkerOptions();
++        markerOptions.position(currentLatLng);
++        markerOptions.title(markerTitle);
++        markerOptions.snippet(markerSnippet);
++        markerOptions.draggable(true);
++
++
++        currentMarker = mMap.addMarker(markerOptions);
++
++        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLng(currentLatLng);
++        mMap.moveCamera(cameraUpdate);
++
++    }
++
++
++    public void setDefaultLocation() {
++
++
++        //디폴트 위치, Seoul
++        LatLng DEFAULT_LOCATION = new LatLng(37.56, 126.97);
++        String markerTitle = "위치정보 가져올 수 없음";
++        String markerSnippet = "위치 퍼미션과 GPS 활성 요부 확인하세요";
++
++
++        if (currentMarker != null) currentMarker.remove();
++
++        MarkerOptions markerOptions = new MarkerOptions();
++        markerOptions.position(DEFAULT_LOCATION);
++        markerOptions.title(markerTitle);
++        markerOptions.snippet(markerSnippet);
++        markerOptions.draggable(true);
++        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
++        currentMarker = mMap.addMarker(markerOptions);
++
++        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
++        mMap.moveCamera(cameraUpdate);
++
++    }
++
++
++    //여기부터는 런타임 퍼미션 처리을 위한 메소드들
++    private boolean checkPermission() {
++
++        int hasFineLocationPermission = ContextCompat.checkSelfPermission(this,
++                Manifest.permission.ACCESS_FINE_LOCATION);
++        int hasCoarseLocationPermission = ContextCompat.checkSelfPermission(this,
++                Manifest.permission.ACCESS_COARSE_LOCATION);
++
++
++
++        if (hasFineLocationPermission == PackageManager.PERMISSION_GRANTED &&
++                hasCoarseLocationPermission == PackageManager.PERMISSION_GRANTED   ) {
++            return true;
++        }
++
++        return false;
++
++    }
++
++
++
++    /*
++     * ActivityCompat.requestPermissions를 사용한 퍼미션 요청의 결과를 리턴받는 메소드입니다.
++     */
++    @Override
++    public void onRequestPermissionsResult(int permsRequestCode,
++                                           @NonNull String[] permissions,
++                                           @NonNull int[] grandResults) {
++
++        if ( permsRequestCode == PERMISSIONS_REQUEST_CODE && grandResults.length == REQUIRED_PERMISSIONS.length) {
++
++            // 요청 코드가 PERMISSIONS_REQUEST_CODE 이고, 요청한 퍼미션 개수만큼 수신되었다면
++
++            boolean check_result = true;
++
++
++            // 모든 퍼미션을 허용했는지 체크합니다.
++
++            for (int result : grandResults) {
++                if (result != PackageManager.PERMISSION_GRANTED) {
++                    check_result = false;
++                    break;
++                }
++            }
++
++
++            if ( check_result ) {
++
++                // 퍼미션을 허용했다면 위치 업데이트를 시작합니다.
++                startLocationUpdates();
++            }
++            else {
++                // 거부한 퍼미션이 있다면 앱을 사용할 수 없는 이유를 설명해주고 앱을 종료합니다.2 가지 경우가 있습니다.
++
++                if (ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[0])
++                        || ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[1])) {
++
++
++                    // 사용자가 거부만 선택한 경우에는 앱을 다시 실행하여 허용을 선택하면 앱을 사용할 수 있습니다.
++                    Snackbar.make(mLayout, "퍼미션이 거부되었습니다. 앱을 다시 실행하여 퍼미션을 허용해주세요. ",
++                            Snackbar.LENGTH_INDEFINITE).setAction("확인", new View.OnClickListener() {
++
++                        @Override
++                        public void onClick(View view) {
++
++                            finish();
++                        }
++                    }).show();
++
++                }else {
++
++
++                    // "다시 묻지 않음"을 사용자가 체크하고 거부를 선택한 경우에는 설정(앱 정보)에서 퍼미션을 허용해야 앱을 사용할 수 있습니다.
++                    Snackbar.make(mLayout, "퍼미션이 거부되었습니다. 설정(앱 정보)에서 퍼미션을 허용해야 합니다. ",
++                            Snackbar.LENGTH_INDEFINITE).setAction("확인", new View.OnClickListener() {
++
++                        @Override
++                        public void onClick(View view) {
++
++                            finish();
++                        }
++                    }).show();
++                }
++            }
++
++        }
++    }
++
++
++    //여기부터는 GPS 활성화를 위한 메소드들
++    private void showDialogForLocationServiceSetting() {
++
++        AlertDialog.Builder builder = new AlertDialog.Builder(WalkingMate_Map.this);
++        builder.setTitle("위치 서비스 비활성화");
++        builder.setMessage("앱을 사용하기 위해서는 위치 서비스가 필요합니다.\n"
++                + "위치 설정을 수정하실래요?");
++        builder.setCancelable(true);
++        builder.setPositiveButton("설정", new DialogInterface.OnClickListener() {
++            @Override
++            public void onClick(DialogInterface dialog, int id) {
++                Intent callGPSSettingIntent
++                        = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
++                startActivityForResult(callGPSSettingIntent, GPS_ENABLE_REQUEST_CODE);
++            }
++        });
++        builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
++            @Override
++            public void onClick(DialogInterface dialog, int id) {
++                dialog.cancel();
++            }
++        });
++        builder.create().show();
++    }
++
++
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
++        super.onActivityResult(requestCode, resultCode, data);
++
++        switch (requestCode) {
++
++            case GPS_ENABLE_REQUEST_CODE:
++
++                //사용자가 GPS 활성 시켰는지 검사
++                if (checkLocationServicesStatus()) {
++                    if (checkLocationServicesStatus()) {
++
++                        Log.d(TAG, "onActivityResult : GPS 활성화 되있음");
++
++
++                        needRequest = true;
++
++                        return;
++                    }
++                }
++
++                break;
++        }
++    }
++
++
++    @Override
++    public void onPlacesFailure(PlacesException e) {
++
++    }
++
++    @Override
++    public void onPlacesStart() {
++
++    }
++
++    @Override
++    public void onPlacesSuccess(final List<Place> places) {
++
++        runOnUiThread(new Runnable() {
++            @Override
++            public void run() {
++                for (noman.googleplaces.Place place : places) {
++
++                    LatLng latLng
++                            = new LatLng(place.getLatitude()
++                            , place.getLongitude());
++
++                    String markerSnippet = getCurrentAddress(latLng);
++
++                    MarkerOptions markerOptions = new MarkerOptions();
++                    markerOptions.position(latLng);
++                    markerOptions.title(place.getName());
++                    markerOptions.snippet(markerSnippet);
++                    Marker item = mMap.addMarker(markerOptions);
++                    previous_marker.add(item);
++
++                }
++
++                //중복 마커 제거
++                HashSet<Marker> hashSet = new HashSet<Marker>();
++                hashSet.addAll(previous_marker);
++                previous_marker.clear();
++                previous_marker.addAll(hashSet);
++
++            }
++        });
++
++    }
++
++    @Override
++    public void onPlacesFinished() {
++
++    }
++
++    public void showPlaceInformation(LatLng location)
++    {
++        mMap.clear();//지도 클리어
++
++        if (previous_marker != null)
++            previous_marker.clear();//지역정보 마커 클리어
++
++        new NRPlaces.Builder()
++                .listener(WalkingMate_Map.this)
++                .key("AIzaSyDgXkkVZxZ2u8nOAhtGNjVGFlFkX46zs4M")
++                .latlng(location.latitude, location.longitude)//현재 위치
++                .radius(2000) //2000 미터 내에서 검색
++                .type(PlaceType.PARK) //공원
++                .build()
++                .execute();
++    }
++
++}
+Index: ../Login_Animal/Bob/src/main/java/com/example/login_animal/RegisterActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/java/com/example/login_animal/RegisterActivity.java	(date 1621088023816)
++++ ../Login_Animal/Bob/src/main/java/com/example/login_animal/RegisterActivity.java	(date 1621088023816)
+@@ -0,0 +1,69 @@
++package com.example.login_animal;
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import com.google.android.gms.tasks.OnCompleteListener;
++import com.google.android.gms.tasks.Task;
++import com.google.firebase.auth.AuthResult;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.auth.FirebaseUser;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++
++public class RegisterActivity extends AppCompatActivity {
++    private FirebaseAuth mFirebaseAuth; //파이어 베이스 인증
++    private DatabaseReference mDatabaseRef; //실시간 데이터 베이스
++    private EditText mEtEmail,mEtpwd;
++    private Button mBtnRegister;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_register);
++
++        mFirebaseAuth = FirebaseAuth.getInstance();
++        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Family login");
++
++        mEtEmail = findViewById(R.id.et_email);
++        mEtpwd = findViewById(R.id.et_pwd);
++        mBtnRegister = findViewById(R.id.btn_register);
++
++        mBtnRegister.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                //회원가입 처리시작
++                String strEmail = mEtEmail.getText().toString();
++                String strPwd = mEtpwd.getText().toString();
++
++                //파이어베이즈 어스 진행
++                mFirebaseAuth.createUserWithEmailAndPassword(strEmail,strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
++                    @Override
++                    public void onComplete(@NonNull Task<AuthResult> task)
++                    {
++                        if(task.isSuccessful()){
++                            FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
++                            UserAccount account = new UserAccount();
++                            account.setIdToken(firebaseUser.getUid());
++                            account.setEmailId(firebaseUser.getEmail());
++                            account.setPassword(strPwd);
++                            //serValue : database에 삽입 행위
++                            mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
++
++                            Toast.makeText(RegisterActivity.this,"회원가입에 성공하셨습니다.",Toast.LENGTH_SHORT).show();
++                        }
++                        else{
++                            Toast.makeText(RegisterActivity.this,"회원가입에 실패하셨습니다.",Toast.LENGTH_SHORT).show();
++                        }
++                    }
++                });
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/AndroidManifest.xml	(date 1621245764316)
++++ ../Login_Animal/Bob/src/main/AndroidManifest.xml	(date 1621245764316)
+@@ -0,0 +1,49 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.example.login_animal">
++
++    <uses-permission android:name="android.permission.INTERNET" />
++    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++
++    <application
++        android:allowBackup="false"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:roundIcon="@mipmap/ic_launcher_round"
++        android:supportsRtl="true"
++        android:theme="@style/Theme.Login_Animal">
++        <activity android:name=".MainActivity"></activity>
++        <activity android:name=".WalkingMate" />
++        <activity android:name=".WalkingMate_Board" />
++
++        <meta-data
++            android:name="com.google.android.geo.API_KEY"
++            android:value="AIzaSyAR_oXdlNkt6J1lW8Oa-8nJ8gQXBrI2Cpw" />
++
++        <activity
++            android:name=".WalkingMate_Map"
++            android:label="@string/title_activity_map" />
++        <activity android:name=".Record" />
++        <activity android:name=".Calendar" />
++        <activity android:name=".Diary" />
++        <activity android:name=".LoginActivity">
++
++        </activity>
++        <activity android:name=".RegisterActivity" />
++        <activity android:name=".Main" >
++        <intent-filter>
++            <action android:name="android.intent.action.MAIN" />
++
++            <category android:name="android.intent.category.LAUNCHER" />
++        </intent-filter>
++        </activity>
++        <activity android:name=".Register_Health" />
++        <activity android:name=".Register_Health_1" />
++        <activity android:name=".Register_Food" >
++        </activity>
++        <activity android:name=".Register_Run" />
++        <activity android:name=".Register_Snack" />
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/test/java/com/example/login_animal/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/test/java/com/example/login_animal/ExampleUnitTest.java	(date 1621088024183)
++++ ../Login_Animal/Bob/src/test/java/com/example/login_animal/ExampleUnitTest.java	(date 1621088024183)
+@@ -0,0 +1,17 @@
++package com.example.login_animal;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * Example local unit test, which will execute on the development machine (host).
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: ../abcdefg/app/src/main/java/org/techtown/abcdefg/Register_Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.techtown.abcdefg;\r\n\r\nimport android.app.AlertDialog;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.AdapterView;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.Button;\r\nimport android.widget.ImageButton;\r\nimport android.widget.Spinner;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\npublic class Register_Food extends AppCompatActivity {\r\n\r\n    ImageButton register;\r\n    Button button;\r\n    Intent intent;\r\n    View v;\r\n    ArrayAdapter<CharSequence> adspin0, adspin1, adspin2, adspin3;\r\n    String choice_do=\"\";\r\n    String choice_se=\"\";\r\n    TextView txtmsg;\r\n    Button btnRec;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.food);\r\n        txtmsg = findViewById(R.id.textView);\r\n        register = findViewById(R.id.imageButton);;\r\n        btnRec = findViewById(R.id.btnRec);\r\n        final Spinner spin0 = (Spinner)findViewById(R.id.spnPer);\r\n        final Spinner spin1 = (Spinner)findViewById(R.id.spinner);\r\n        final Spinner spin2 = (Spinner)findViewById(R.id.spinner2);\r\n        adspin0 = ArrayAdapter.createFromResource(this, R.array.spinner_per, android.R.layout.simple_spinner_dropdown_item);\r\n        adspin1 = ArrayAdapter.createFromResource(this, R.array.spinner_do, android.R.layout.simple_spinner_dropdown_item);//처번째 어댑터에 값을 넣습니다. this=는 현재class를 의미합니다. R.array.spinner_do는 이곳에 도시를 다 쓸 경우 코딩이 길어지기 때문에 value->string.xml에 따로 String값들을 선언해두었습니다. //R.layout.simple_~~~는 안드로이드에서 기본제공하는 spinner 모양입니다. 다른것도 있는데 비슷합니다. adspin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);//이부분이 정확히 말로 설명을 못하겠습니다. 아무튼 필요합니다. 헤헤 고수분들 도와주세요.\r\n        adspin1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\r\n        adspin2 = ArrayAdapter.createFromResource(org.techtown.abcdefg.Register_Food.this, R.array.spinner_do_g, android.R.layout.simple_spinner_dropdown_item);\r\n        adspin3 = ArrayAdapter.createFromResource(org.techtown.abcdefg.Register_Food.this,R.array.spinner_do_s, android.R.layout.simple_spinner_dropdown_item);\r\n        spin1.setAdapter(adspin1);\r\n\r\n\r\n        ArrayAdapter PerAdapter = ArrayAdapter.createFromResource(this,\r\n                R.array.spinner_per, android.R.layout.simple_spinner_item);\r\n        PerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\r\n        spin0.setAdapter(PerAdapter);\r\n\r\n        spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {\r\n            @Override\r\n            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {\r\n                if (adspin1.getItem(i).equals(\"건식 사료\")) {\r\n                    choice_do = \"건식 사료\";\r\n                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\r\n                    spin2.setAdapter(adspin2);\r\n                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {\r\n                        @Override\r\n                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {\r\n                            choice_se = adspin2.getItem(i).toString();\r\n                        }\r\n\r\n                        @Override\r\n                        public void onNothingSelected(AdapterView<?> adapterView) {\r\n                        }\r\n                    });\r\n                } else if (adspin1.getItem(i).equals(\"습식 사료\")) {\r\n                    choice_do = \"습식 사료\";\r\n                    adspin3 = ArrayAdapter.createFromResource(org.techtown.abcdefg.Register_Food.this, R.array.spinner_do_s, android.R.layout.simple_spinner_dropdown_item);\r\n                    adspin3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\r\n                    spin2.setAdapter(adspin3);\r\n                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {\r\n                        @Override\r\n                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {\r\n                            choice_se = adspin3.getItem(i).toString();\r\n                        }\r\n\r\n                        @Override\r\n                        public void onNothingSelected(AdapterView<?> adapterView) {\r\n                        }\r\n                    });\r\n                }\r\n            }\r\n\r\n            @Override\r\n            public void onNothingSelected(AdapterView<?> adapterView) {\r\n\r\n            }\r\n        });\r\n        btnRec.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                AlertDialog.Builder builder = new AlertDialog.Builder(org.techtown.abcdefg.Register_Food.this);\r\n                builder.setTitle(\"권장 사료량\");\r\n                builder.setMessage(\"생후~3개월 : 몸무게의 7% \\n 3개월~6개월 : 몸무게의 5~7% \\n 6개월~12개월 : 몸무게의 4~5% \\n 12개월 이상 : 몸무게의 2~3%\");\r\n                builder.setNeutralButton(\"닫기\",null);\r\n                builder.create().show();\r\n\r\n            }\r\n        });\r\n        register.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                txtmsg.setText(\"오늘의 간식정보 등록 완료!\");\r\n            }\r\n        });\r\n\r\n      \r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../abcdefg/app/src/main/java/org/techtown/abcdefg/Register_Food.java	(revision dc185d2f3311133c37925ad146c5fbc3af41dd74)
++++ ../abcdefg/app/src/main/java/org/techtown/abcdefg/Register_Food.java	(date 1621778517649)
+@@ -101,7 +101,7 @@
+         register.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                txtmsg.setText("오늘의 간식정보 등록 완료!");
++                txtmsg.setText("오늘의 밥 정보 등록 완료!");
+             }
+         });
+ 
+Index: ../Login_Animal/Bob/src/debug/res/values/google_maps_api.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/debug/res/values/google_maps_api.xml	(date 1621088023767)
++++ ../Login_Animal/Bob/src/debug/res/values/google_maps_api.xml	(date 1621088023767)
+@@ -0,0 +1,24 @@
++<resources>
++    <!--
++    TODO: Before you run your application, you need a Google Maps API key.
++
++    To get one, follow this link, follow the directions and press "Create" at the end:
++
++    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=DF:34:7C:20:BA:1A:2A:41:7C:90:4F:77:6E:9A:2E:9B:4F:99:E8:7E%3Bcom.example.login_animal
++
++    You can also add your credentials to an existing key, using these values:
++
++    Package name:
++    com.example.login_animal
++
++    SHA-1 certificate fingerprint:
++    DF:34:7C:20:BA:1A:2A:41:7C:90:4F:77:6E:9A:2E:9B:4F:99:E8:7E
++
++    Alternatively, follow the directions here:
++    https://developers.google.com/maps/documentation/android/start#get-key
++
++    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
++    string in this file.
++    -->
++    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAR_oXdlNkt6J1lW8Oa-8nJ8gQXBrI2Cpw</string>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/release/res/values/google_maps_api.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/release/res/values/google_maps_api.xml	(date 1621088024162)
++++ ../Login_Animal/Bob/src/release/res/values/google_maps_api.xml	(date 1621088024162)
+@@ -0,0 +1,20 @@
++<resources>
++    <!--
++    TODO: Before you release your application, you need a Google Maps API key.
++
++    To do this, you can either add your release key credentials to your existing
++    key, or create a new key.
++
++    Note that this file specifies the API key for the release build target.
++    If you have previously set up a key for the debug target with the debug signing certificate,
++    you will also need to set up a key for your release certificate.
++
++    Follow the directions here:
++
++    https://developers.google.com/maps/documentation/android/signup
++
++    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
++    string in this file.
++    -->
++    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/androidTest/java/com/example/login_animal/ExampleInstrumentedTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/androidTest/java/com/example/login_animal/ExampleInstrumentedTest.java	(date 1621088023744)
++++ ../Login_Animal/Bob/src/androidTest/java/com/example/login_animal/ExampleInstrumentedTest.java	(date 1621088023744)
+@@ -0,0 +1,26 @@
++package com.example.login_animal;
++
++import android.content.Context;
++
++import androidx.test.platform.app.InstrumentationRegistry;
++import androidx.test.ext.junit.runners.AndroidJUnit4;
++
++import org.junit.Test;
++import org.junit.runner.RunWith;
++
++import static org.junit.Assert.*;
++
++/**
++ * Instrumented test, which will execute on an Android device.
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++@RunWith(AndroidJUnit4.class)
++public class ExampleInstrumentedTest {
++    @Test
++    public void useAppContext() {
++        // Context of the app under test.
++        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
++        assertEquals("com.example.login_animal", appContext.getPackageName());
++    }
++}
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/values/strings.xml	(date 1621239833144)
++++ ../Login_Animal/Bob/src/main/res/values/strings.xml	(date 1621239833144)
+@@ -0,0 +1,22 @@
++<resources>
++    <string name="app_name">Login_Animal</string>
++    <string name="title_activity_map">Map</string>
++    <string-array name = "spinner_per">
++        <item>알쏭이 엄마</item>
++        <item>하늘이 엄마</item>
++        <item>마리 아빠</item>
++    </string-array>
++    <string-array name = "spinner_do">
++        <item>건식 사료</item>
++        <item>습식 사료</item>
++    </string-array>
++    <string-array name = "spinner_do_g">
++        <item>절반</item>
++        <item>가득</item>
++    </string-array>
++    <string-array name = "spinner_do_s">
++        <item>한 캔</item>
++        <item>두 캔</item>
++        <item>세 캔</item>
++    </string-array>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/values/themes.xml	(date 1621088024153)
++++ ../Login_Animal/Bob/src/main/res/values/themes.xml	(date 1621088024153)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.Login_Animal" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">#FFE0B2</item>
++        <item name="colorPrimaryVariant">#FFE0B2</item>
++        <item name="colorOnPrimary">@color/white</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/values/colors.xml	(date 1621088024146)
++++ ../Login_Animal/Bob/src/main/res/values/colors.xml	(date 1621088024146)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="purple_200">#FFBB86FC</color>
++    <color name="purple_500">#FF6200EE</color>
++    <color name="purple_700">#FF3700B3</color>
++    <color name="teal_200">#FF03DAC5</color>
++    <color name="teal_700">#FF018786</color>
++    <color name="black">#FF000000</color>
++    <color name="white">#FFFFFFFF</color>
++    <color name="beige">#FFE0B2</color>
++</resources>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/walking_mate_board.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/walking_mate_board.xml	(date 1621088024055)
++++ ../Login_Animal/Bob/src/main/res/layout/walking_mate_board.xml	(date 1621088024055)
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".WriteActivity">
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="68dp"
++        android:text="산책 메이트 찾기 게시판"
++        android:textSize="30dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/bntwrite"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="25dp"
++        android:layout_marginBottom="28dp"
++        android:text="작성"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/activity_register.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/activity_register.xml	(date 1621088023991)
++++ ../Login_Animal/Bob/src/main/res/layout/activity_register.xml	(date 1621088023991)
+@@ -0,0 +1,44 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".RegisterActivity">
++
++    <EditText
++        android:id="@+id/et_email"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="200dp"
++        android:ems="10"
++        android:hint="이메일을 입력하시오"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textEmailAddress"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <EditText
++        android:id="@+id/et_pwd"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="100dp"
++        android:ems="10"
++        android:hint="비밀번호를 입력하시오"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textPassword"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/et_email" />
++
++    <Button
++        android:id="@+id/btn_register"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:text="가입완료"
++        android:fontFamily="@font/esamanru_medium"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/walking_mate_map.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/walking_mate_map.xml	(date 1621088024058)
++++ ../Login_Animal/Bob/src/main/res/layout/walking_mate_map.xml	(date 1621088024058)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:id="@+id/layout_main"
++    android:orientation="vertical"
++    tools:context=".WalkingMate_Map" >
++
++    <fragment
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:layout_weight="0.9"
++        android:id="@+id/map"
++        tools:context=".MapsActivity"
++        android:name="com.google.android.gms.maps.SupportMapFragment" />
++
++    <Button
++        android:text="공원 검색"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:layout_weight="0.1"
++        android:id="@+id/button"/>
++
++</LinearLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/activity_login.xml	(date 1621088023983)
++++ ../Login_Animal/Bob/src/main/res/layout/activity_login.xml	(date 1621088023983)
+@@ -0,0 +1,58 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".LoginActivity">
++
++    <EditText
++        android:id="@+id/et_email"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="200dp"
++        android:ems="10"
++        android:hint="이메일을 입력하시오"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textEmailAddress"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <EditText
++        android:id="@+id/et_pwd"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="100dp"
++        android:ems="10"
++        android:hint="비밀번호를 입력하시오"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textPassword"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/et_email" />
++
++    <Button
++        android:id="@+id/btn_login"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="68dp"
++        android:layout_marginBottom="36dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="로그인"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent" />
++
++    <Button
++        android:id="@+id/btn_register"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginBottom="36dp"
++        android:backgroundTint="@color/beige"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="회원가입"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.151"
++        app:layout_constraintStart_toStartOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/activity_main.xml	(date 1621088023987)
++++ ../Login_Animal/Bob/src/main/res/layout/activity_main.xml	(date 1621088023987)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Hello World!"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/walking_mate.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/walking_mate.xml	(date 1621088024050)
++++ ../Login_Animal/Bob/src/main/res/layout/walking_mate.xml	(date 1621088024050)
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".WalkingMate">
++
++    <Button
++        android:id="@+id/btnWrite"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="364dp"
++        android:text="산책 메이트 찾기"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/btnMap"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="2dp"
++        android:text="근처 공원 보기"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/btnWrite" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/register_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/register_2.xml	(date 1621088024041)
++++ ../Login_Animal/Bob/src/main/res/layout/register_2.xml	(date 1621088024041)
+@@ -0,0 +1,119 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <EditText
++        android:id="@+id/editTextTextPersonName5"
++        android:layout_width="184dp"
++        android:layout_height="40dp"
++        android:layout_marginStart="125dp"
++        android:layout_marginTop="10dp"
++        android:layout_marginEnd="112dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textPersonName"
++        android:text="품종을 입력하세요"
++        android:textColor="#E19861"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
++
++    <ImageView
++        android:id="@+id/imgView1"
++        android:layout_width="247dp"
++        android:layout_height="180dp"
++        android:layout_marginStart="74dp"
++        android:layout_marginTop="32dp"
++        android:layout_marginEnd="74dp"
++        android:fontFamily="@font/esamanru_medium"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:srcCompat="@drawable/dog" />
++
++    <EditText
++        android:id="@+id/editTextTextPersonName"
++        android:layout_width="184dp"
++        android:layout_height="43dp"
++        android:layout_marginStart="125dp"
++        android:layout_marginEnd="112dp"
++        android:layout_marginBottom="200dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textPersonName"
++        android:text="이름을 입력하세요"
++        android:textColor="#E19861"
++        android:textColorHighlight="#FFCCBC"
++        android:textColorHint="#FFCCBC"
++        android:textColorLink="#FFCCBC"
++        android:textCursorDrawable="@color/black"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
++
++    <RadioGroup
++        android:id="@+id/radioGroup"
++        android:layout_width="0dp"
++        android:layout_height="39dp"
++        android:layout_marginStart="110dp"
++        android:layout_marginEnd="80dp"
++        android:orientation="horizontal"
++        android:fontFamily="@font/esamanru_medium"
++        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/imgView1">
++
++        <RadioButton
++            android:id="@+id/radioButton3"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_weight="1"
++            android:fontFamily="@font/esamanru_medium"
++            android:text="수컷"
++            android:textColor="#E19861" />
++
++        <RadioButton
++            android:id="@+id/radioButton4"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_weight="1"
++            android:fontFamily="@font/esamanru_medium"
++            android:text="암컷"
++            android:textColor="#E19861" />
++
++    </RadioGroup>
++
++    <EditText
++        android:id="@+id/editTextTextPersonName2"
++        android:layout_width="184dp"
++        android:layout_height="40dp"
++        android:layout_marginStart="125dp"
++        android:layout_marginTop="10dp"
++        android:layout_marginEnd="112dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:inputType="textPersonName"
++        android:text="생년월일을 입력하세요"
++        android:textColor="#E19861"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
++
++    <Button
++        android:id="@+id/button"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="41dp"
++        android:layout_marginBottom="10dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="등록하기"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/register_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/register_1.xml	(date 1621088024037)
++++ ../Login_Animal/Bob/src/main/res/layout/register_1.xml	(date 1621088024037)
+@@ -0,0 +1,61 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="10dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="반려동물이 없습니다 !"
++        android:textColor="#E19861"
++        android:textSize="25dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/imgView1"
++        app:layout_constraintVertical_bias="0.297" />
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="50dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="반려동물 등록"
++        android:textColor="#E19861"
++        android:textSize="35dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageView
++        android:id="@+id/imgView1"
++        android:layout_width="192dp"
++        android:layout_height="183dp"
++        android:layout_marginTop="36dp"
++        app:layout_constraintEnd_toEndOf="@+id/textView"
++        app:layout_constraintHorizontal_bias="0.466"
++        app:layout_constraintStart_toStartOf="@+id/textView"
++        app:layout_constraintTop_toBottomOf="@+id/textView"
++        app:srcCompat="@drawable/dog" />
++
++    <Button
++        android:id="@+id/button"
++        android:layout_width="103dp"
++        android:layout_height="50dp"
++        android:layout_marginTop="56dp"
++        android:layout_marginEnd="55dp"
++        android:text="등록하기"
++        android:fontFamily="@font/esamanru_medium"
++        app:layout_constraintEnd_toEndOf="@+id/textView2"
++        app:layout_constraintHorizontal_bias="0.887"
++        app:layout_constraintStart_toStartOf="@+id/textView2"
++        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/health_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/health_3.xml	(date 1621088024027)
++++ ../Login_Animal/Bob/src/main/res/layout/health_3.xml	(date 1621088024027)
+@@ -0,0 +1,76 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/txtGive"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="124dp"
++        android:layout_marginTop="32dp"
++        android:layout_marginEnd="124dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="건강 등록"
++        android:textColor="#E19861"
++        android:textSize="20dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.493"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/txtHealth"
++        android:layout_width="224dp"
++        android:layout_height="56dp"
++        android:layout_marginStart="91dp"
++        android:layout_marginTop="92dp"
++        android:layout_marginEnd="91dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="예방접종 1차 \n 대소변 잘 가림"
++        android:textAlignment="center"
++        android:textColor="#E19861"
++        android:textSize="25dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtDay" />
++
++    <TextView
++        android:id="@+id/txtDay"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="118dp"
++        android:layout_marginTop="44dp"
++        android:layout_marginEnd="118dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="4월 15일"
++        android:textColor="#E19861"
++        android:textSize="35dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.487"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive" />
++
++    <ImageButton
++        android:id="@+id/imgBtn7"
++        android:layout_width="84dp"
++        android:layout_height="71dp"
++        android:layout_marginStart="153dp"
++        android:layout_marginTop="356dp"
++        android:layout_marginEnd="153dp"
++        android:background="@android:color/transparent"
++        android:scaleType="fitXY"
++        android:text="등록"
++        android:textAlignment="center"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.469"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive"
++        app:srcCompat="@drawable/paw_register" />
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/health_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/health_2.xml	(date 1621088024009)
++++ ../Login_Animal/Bob/src/main/res/layout/health_2.xml	(date 1621088024009)
+@@ -0,0 +1,76 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/txtGive"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="124dp"
++        android:layout_marginTop="32dp"
++        android:layout_marginEnd="124dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="건강 등록"
++        android:textColor="#E19861"
++        android:textSize="20dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.493"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/txtHealth"
++        android:layout_width="224dp"
++        android:layout_height="56dp"
++        android:layout_marginStart="91dp"
++        android:layout_marginTop="92dp"
++        android:layout_marginEnd="91dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="예방접종 1차 \n 대소변 잘 가림"
++        android:textAlignment="center"
++        android:textColor="#E19861"
++        android:textSize="25dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtDay" />
++
++    <TextView
++        android:id="@+id/txtDay"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="118dp"
++        android:layout_marginTop="44dp"
++        android:layout_marginEnd="118dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="4월 15일"
++        android:textColor="#E19861"
++        android:textSize="35dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.487"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive" />
++
++    <ImageButton
++        android:id="@+id/imgBtn6"
++        android:layout_width="84dp"
++        android:layout_height="71dp"
++        android:layout_marginStart="153dp"
++        android:layout_marginTop="356dp"
++        android:layout_marginEnd="153dp"
++        android:background="@android:color/transparent"
++        android:scaleType="fitXY"
++        android:text="추가"
++        android:textAlignment="center"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.469"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive"
++        app:srcCompat="@drawable/paw_register" />
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/health_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/health_1.xml	(date 1621088024005)
++++ ../Login_Animal/Bob/src/main/res/layout/health_1.xml	(date 1621088024005)
+@@ -0,0 +1,73 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/txtGive"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="124dp"
++        android:layout_marginTop="32dp"
++        android:layout_marginEnd="124dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="건강 등록"
++        android:textColor="#E19861"
++        android:textSize="20dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.493"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="241dp"
++        android:layout_height="31dp"
++        android:layout_marginStart="91dp"
++        android:layout_marginTop="96dp"
++        android:layout_marginEnd="91dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="건강을 등록해주세요 !"
++        android:textColor="#E19861"
++        android:textSize="25dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtDay" />
++
++    <TextView
++        android:id="@+id/txtDay"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="118dp"
++        android:layout_marginTop="44dp"
++        android:layout_marginEnd="118dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="4월 15일"
++        android:textColor="#E19861"
++        android:textSize="35dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.487"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive" />
++
++    <ImageButton
++        android:id="@+id/imgBtn5"
++        android:layout_width="84dp"
++        android:layout_height="71dp"
++        android:layout_marginStart="153dp"
++        android:layout_marginTop="356dp"
++        android:layout_marginEnd="153dp"
++        android:background="@android:color/transparent"
++        android:scaleType="fitXY"
++        android:text="등록"
++        android:textAlignment="center"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.469"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/txtGive"
++        app:srcCompat="@drawable/paw_add" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/calendar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/calendar.xml	(date 1621088023995)
++++ ../Login_Animal/Bob/src/main/res/layout/calendar.xml	(date 1621088023995)
+@@ -0,0 +1,75 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical"
++    android:colorPrimary="#FFE0B2"
++    >
++
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_gravity="fill_horizontal"
++        android:gravity="center_horizontal"
++        android:orientation="vertical">
++
++        <DatePicker
++            android:id="@+id/datePicker"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="15sp"
++            android:headerBackground="#FFE0B2"
++
++            />
++
++        />
++
++    </LinearLayout>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="170dp"
++        android:orientation="vertical">
++
++        <EditText
++            android:id="@+id/edtDiary"
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:background="#DDDDDD"
++            android:ems="10"
++            android:gravity="start|center_vertical"
++            android:inputType="text|textMultiLine|textCapSentences"
++            android:padding="7sp"
++            android:text="" />
++
++    </LinearLayout>
++
++    <RelativeLayout
++        android:layout_width="fill_parent"
++        android:layout_height="fill_parent">
++
++        <Button
++            android:id="@+id/btnSave"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_alignParentRight="true"
++            android:layout_marginTop="35dp"
++            android:layout_marginRight="77dp"
++            android:text="입력하기"
++            android:backgroundTint="#FFE0B2"
++            />
++
++        <Button
++            android:id="@+id/btndiary"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_alignParentRight="true"
++            android:layout_marginTop="35dp"
++            android:layout_marginRight="242dp"
++            android:backgroundTint="#FFE0B2"
++            android:text="다이어리" />
++
++    </RelativeLayout>
++</LinearLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/record.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/record.xml	(date 1621088024033)
++++ ../Login_Animal/Bob/src/main/res/layout/record.xml	(date 1621088024033)
+@@ -0,0 +1,134 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Record">
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center"
++        android:layout_margin="45dp"
++        android:layout_marginStart="124dp"
++        android:layout_marginTop="40dp"
++        android:text="건강 기록"
++        android:textSize="40dp"
++        android:textStyle="bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <EditText
++        android:id="@+id/idText1"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentRight="true"
++        android:layout_marginStart="32dp"
++        android:layout_marginTop="88dp"
++        android:layout_marginEnd="32dp"
++        android:ems="10"
++        android:hint="몸무게"
++        android:inputType="textPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/idText2"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentRight="true"
++        android:layout_marginStart="32dp"
++        android:layout_marginTop="156dp"
++        android:layout_marginEnd="32dp"
++        android:ems="10"
++        android:hint="배변/구토"
++        android:inputType="textPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/idText3"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentRight="true"
++        android:layout_marginStart="32dp"
++        android:layout_marginTop="220dp"
++        android:layout_marginEnd="32dp"
++        android:ems="10"
++        android:hint="투약기록"
++        android:inputType="textPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/idText4"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentRight="true"
++        android:layout_marginStart="32dp"
++        android:layout_marginTop="284dp"
++        android:layout_marginEnd="32dp"
++        android:ems="10"
++        android:hint="접종일정"
++        android:inputType="textPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/idText5"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentRight="true"
++        android:layout_marginStart="32dp"
++        android:layout_marginTop="348dp"
++        android:layout_marginEnd="32dp"
++        android:ems="10"
++        android:hint="특이사항"
++        android:inputType="textPersonName"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView" />
++
++    <Button
++        android:id="@+id/savebutton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="26dp"
++        android:text="저장"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/idText5" />
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/snack.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/snack.xml	(date 1621088024047)
++++ ../Login_Animal/Bob/src/main/res/layout/snack.xml	(date 1621088024047)
+@@ -0,0 +1,168 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine4"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="33dp"
++        android:layout_marginBottom="2dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 오전 11시"
++        android:textColor="#E19861"
++        app:layout_constraintBottom_toBottomOf="@+id/textView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView2" />
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="137dp"
++        android:layout_height="51dp"
++        android:layout_marginStart="34dp"
++        android:layout_marginEnd="14dp"
++        android:layout_marginBottom="41dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="준 사람 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView5"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView6" />
++
++    <TextView
++        android:id="@+id/textView5"
++        android:layout_width="139dp"
++        android:layout_height="46dp"
++        android:layout_marginStart="34dp"
++        android:layout_marginEnd="8dp"
++        android:layout_marginBottom="32dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="간식종류 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView2"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine3"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView4" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="33dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="이름을 입력하세요!"
++        android:textColor="#E19861"
++        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView4" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="140dp"
++        android:layout_height="44dp"
++        android:layout_marginStart="34dp"
++        android:layout_marginEnd="14dp"
++        android:layout_marginBottom="26dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="준 시간 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView3"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine4"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView5" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="33dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 5개"
++        android:textColor="#E19861"
++        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView3" />
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="138dp"
++        android:layout_height="43dp"
++        android:layout_marginStart="34dp"
++        android:layout_marginEnd="19dp"
++        android:layout_marginBottom="72dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="간식 수 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/imageButton"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine2"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="31dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 말린 과일"
++        android:textColor="#E19861"
++        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView5" />
++
++    <TextView
++        android:id="@+id/textView6"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="110dp"
++        android:layout_marginBottom="77dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="간식정보를 등록해주세요!"
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView4"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageButton
++        android:id="@+id/imageButton"
++        android:layout_width="236dp"
++        android:layout_height="122dp"
++        android:layout_marginBottom="9dp"
++        android:adjustViewBounds="true"
++        android:background="#00000000"
++        android:scaleType="fitCenter"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView3"
++        app:srcCompat="@drawable/paw_register" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/diary.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/diary.xml	(date 1621088023998)
++++ ../Login_Animal/Bob/src/main/res/layout/diary.xml	(date 1621088023998)
+@@ -0,0 +1,78 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".diary">
++
++    <ImageView
++        android:id="@+id/imageView"
++        android:layout_width="160dp"
++        android:layout_height="144dp"
++        android:layout_marginTop="88dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.498"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        tools:srcCompat="@tools:sample/avatars" />
++
++
++    <EditText
++        android:id="@+id/edtDiary"
++        android:layout_width="0dp"
++        android:layout_height="200dp"
++        android:layout_marginStart="30dp"
++        android:layout_marginEnd="30dp"
++        android:layout_marginBottom="24dp"
++        android:background="#DDDDDD"
++        android:ems="10"
++        android:gravity="start|center_vertical"
++        android:inputType="text|textMultiLine|textCapSentences"
++        android:padding="7sp"
++        android:text=""
++        app:layout_constraintBottom_toTopOf="@+id/btnsave"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent" />
++
++    <Button
++        android:id="@+id/btnCamera"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="20dp"
++        android:layout_marginEnd="23dp"
++        android:text="카메라"
++        app:layout_constraintEnd_toStartOf="@+id/btnimage"
++        app:layout_constraintTop_toBottomOf="@+id/imageView"
++        />
++
++    <Button
++        android:id="@+id/btnsave"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="92dp"
++        android:layout_marginBottom="96dp"
++        android:text="저장"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++
++    <Button
++        android:id="@+id/btncancel"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="91dp"
++        android:text="취소"
++        app:layout_constraintBaseline_toBaselineOf="@+id/btnsave"
++        app:layout_constraintEnd_toEndOf="parent" />
++
++    <Button
++        android:id="@+id/btnimage"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="100dp"
++        android:text="갤러리"
++        app:layout_constraintBaseline_toBaselineOf="@+id/btnCamera"
++        app:layout_constraintStart_toStartOf="@+id/imageView" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/main.xml	(date 1621088024030)
++++ ../Login_Animal/Bob/src/main/res/layout/main.xml	(date 1621088024030)
+@@ -0,0 +1,90 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="20dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="반려 동물"
++        android:textColor="#E19861"
++        android:textSize="30dp"
++        app:layout_constraintHorizontal_bias="0.498"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageView
++        android:id="@+id/imgView1"
++        android:layout_width="233dp"
++        android:layout_height="214dp"
++        android:layout_marginStart="51dp"
++        android:layout_marginEnd="51dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.21"
++        app:srcCompat="@drawable/dog" />
++
++    <ImageButton
++        android:id="@+id/imgBtn1"
++        android:layout_width="117dp"
++        android:layout_height="0dp"
++        android:layout_marginStart="35dp"
++        android:layout_marginEnd="33dp"
++        android:layout_marginBottom="14dp"
++        android:scaleType="fitXY"
++        android:background="@android:color/transparent"
++        app:layout_constraintBottom_toTopOf="@+id/imgBtn3"
++        app:layout_constraintEnd_toStartOf="@+id/imgBtn2"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/imgBtn2"
++        app:srcCompat="@drawable/paw1" />
++
++    <ImageButton
++        android:id="@+id/imgBtn2"
++        android:layout_width="117dp"
++        android:layout_height="106dp"
++        android:layout_marginStart="52dp"
++        android:layout_marginBottom="124dp"
++        android:scaleType="fitXY"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/imgBtn1"
++        android:background="@android:color/transparent"
++        app:srcCompat="@drawable/paw2"
++        />
++
++    <ImageButton
++        android:id="@+id/imgBtn3"
++        android:layout_width="117dp"
++        android:layout_height="106dp"
++        android:layout_marginStart="35dp"
++        android:layout_marginBottom="5dp"
++        app:srcCompat="@drawable/paw3"
++        android:background="@android:color/transparent"
++        android:scaleType="fitXY"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="@+id/imgBtn1"
++        app:layout_constraintStart_toStartOf="parent" />
++
++    <ImageButton
++        android:id="@+id/imgBtn4"
++        android:layout_width="117dp"
++        android:layout_height="106dp"
++        android:layout_marginStart="2dp"
++        android:layout_marginBottom="4dp"
++        android:scaleType="fitXY"
++        android:background="@android:color/transparent"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/imgBtn3"
++        app:layout_constraintStart_toStartOf="@+id/imgBtn2"
++        app:srcCompat="@drawable/paw4" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/food.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/food.xml	(date 1621247381910)
++++ ../Login_Animal/Bob/src/main/res/layout/food.xml	(date 1621247381910)
+@@ -0,0 +1,135 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="150dp"
++        android:layout_height="0dp"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="240dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="준사람 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Spinner
++        android:id="@+id/spnPer"
++        android:layout_width="150dp"
++        android:layout_height="30dp"
++        android:layout_marginEnd="68dp"
++        android:entries="@array/spinner_per"
++        android:fontFamily="@font/esamanru_medium"
++        android:spinnerMode="dropdown"
++        app:layout_constraintBottom_toBottomOf="@+id/textView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView2" />
++
++    <Spinner
++        android:id="@+id/spinner"
++        android:layout_width="150dp"
++        android:layout_height="wrap_content"
++        android:spinnerMode="dropdown"
++        app:layout_constraintBottom_toBottomOf="@+id/textView3"
++        app:layout_constraintStart_toEndOf="@+id/textView4"
++        app:layout_constraintTop_toTopOf="@+id/textView3" />
++
++    <Spinner
++        android:id="@+id/spinner2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintBottom_toBottomOf="@+id/spinner"
++        app:layout_constraintStart_toEndOf="@+id/spinner"
++        app:layout_constraintTop_toTopOf="@+id/spinner" />
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="110dp"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="28dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="식사량 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView4" />
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="312dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="준 시간 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 오후 2시"
++        android:textColor="#E19861"
++        app:layout_constraintStart_toEndOf="@+id/textView4"
++        app:layout_constraintTop_toTopOf="@+id/textView4" />
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="90dp"
++        android:text="밥 정보를 등록해주세요!"
++        android:textColor="#E19861"
++        android:fontFamily="@font/esamanru_medium"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageButton
++        android:id="@+id/imageButton"
++        android:layout_width="192dp"
++        android:layout_height="131dp"
++        android:layout_marginBottom="4dp"
++        android:adjustViewBounds="true"
++        android:background="#00000000"
++        android:scaleType="fitCenter"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:srcCompat="@drawable/paw_register" />
++
++    <Button
++        android:id="@+id/btnRec"
++        android:layout_width="207dp"
++        android:layout_height="39dp"
++        android:layout_marginStart="24dp"
++        android:layout_marginTop="40dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="권장 사료량"
++        android:textColor="#E19861"
++        android:textSize="15sp"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView3" />
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/layout/run.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/layout/run.xml	(date 1621088024044)
++++ ../Login_Animal/Bob/src/main/res/layout/run.xml	(date 1621088024044)
+@@ -0,0 +1,138 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="#E6DD8D"
++    android:backgroundTint="#FFFFFC"
++    tools:context=".Main">
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="140dp"
++        android:layout_height="48dp"
++        android:layout_marginStart="26dp"
++        android:layout_marginEnd="7dp"
++        android:layout_marginBottom="61dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="시킨 사람 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView2"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine2"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView4" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="2dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 1시간 30분"
++        android:textColor="#E19861"
++        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView2" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="7dp"
++        android:layout_marginBottom="52dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="산책 시간 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView3"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine"
++        app:layout_constraintHorizontal_chainStyle="packed"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="27dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="이름을 입력하세요!"
++        android:textColor="#E19861"
++        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView" />
++
++    <EditText
++        android:id="@+id/editTextTextMultiLine3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="2dp"
++        android:ems="10"
++        android:fontFamily="@font/esamanru_medium"
++        android:gravity="start|top"
++        android:inputType="textMultiLine"
++        android:text="ex) 단대 호수"
++        android:textColor="#E19861"
++        app:layout_constraintBottom_toBottomOf="@+id/textView3"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/textView3" />
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="7dp"
++        android:layout_marginBottom="107dp"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="산책 장소 : "
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/imageButton"
++        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine3"
++        app:layout_constraintHorizontal_chainStyle="packed"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="110dp"
++        android:layout_marginBottom="71dp"
++        android:drawableTint="#E1D887"
++        android:fontFamily="@font/esamanru_medium"
++        android:text="산책정보를 등록해주세요!"
++        android:textColor="#E19861"
++        android:textSize="30sp"
++        android:textStyle="normal|bold"
++        app:layout_constraintBottom_toTopOf="@+id/textView"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageButton
++        android:id="@+id/imageButton"
++        android:layout_width="231dp"
++        android:layout_height="0dp"
++        android:layout_marginBottom="29dp"
++        android:adjustViewBounds="true"
++        android:background="#00000000"
++        android:scaleType="fitCenter"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView3"
++        app:srcCompat="@drawable/paw_register" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../Login_Animal/Bob/src/main/res/font/font.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/font/font.xml	(date 1621088023978)
++++ ../Login_Animal/Bob/src/main/res/font/font.xml	(date 1621088023978)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<font-family xmlns:android="http://schemas.android.com/apk/res/android">
++
++</font-family>
+\ No newline at end of file
+Index: ../abcdefg/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"12\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n        <option name=\"useQualifiedModuleNames\" value=\"true\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../abcdefg/.idea/gradle.xml	(revision dc185d2f3311133c37925ad146c5fbc3af41dd74)
++++ ../abcdefg/.idea/gradle.xml	(date 1621778554773)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: ../Login_Animal/Bob/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/src/main/res/drawable/ic_launcher_background.xml	(date 1621088023915)
++++ ../Login_Animal/Bob/src/main/res/drawable/ic_launcher_background.xml	(date 1621088023915)
+@@ -0,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: ../Login_Animal/Bob/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../Login_Animal/Bob/.gitignore	(date 1621088023719)
++++ ../Login_Animal/Bob/.gitignore	(date 1621088023719)
+@@ -0,0 +1,1 @@
++/build
+\ No newline at end of file

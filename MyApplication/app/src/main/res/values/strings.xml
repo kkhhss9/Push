@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_map">Map</string>
+    <string-array name = "spinner_per">
+        <item>알쏭이 엄마</item>
+        <item>하늘이 엄마</item>
+        <item>마리 아빠</item>
+    </string-array>
+    <string-array name = "spinner_do">
+        <item>건식 사료</item>
+        <item>습식 사료</item>
+    </string-array>
+    <string-array name = "spinner_do_g">
+        <item>절반</item>
+        <item>가득</item>
+    </string-array>
+    <string-array name = "spinner_do_s">
+        <item>한 캔</item>
+        <item>두 캔</item>
+        <item>세 캔</item>
+    </string-array>
+</resources>
